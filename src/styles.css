@@ -1,0 +1,95 @@
+ 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    width: 100%;
+    max-width: 1200px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.header button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 4px;
+}
+
+.header button:hover {
+    background-color: #0056b3;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+td button {
+    padding: 5px 10px;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+td button.edit {
+    background-color: #007bff;
+    margin-right: 5px;
+}
+
+td button.delete {
+    background-color: #dc3545;
+}
+
+td button.edit:hover {
+    background-color: #0056b3;
+}
+
+td button.delete:hover {
+    background-color: #c82333;
+}

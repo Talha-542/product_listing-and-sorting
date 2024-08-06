@@ -1,38 +1,161 @@
+/* App.css */
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  margin-bottom: 20px;
+  position: relative;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+input {
+  margin-right: 10px;
+  width: 30%;
+  margin-left: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+input:focus {
+  width: 50%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+thead th {
+  background-color: #f2f2f2;
+  text-align: left;
+  padding: 8px;
+}
+
+tbody td {
+  padding: 8px;
+  border-bottom: 1px solid #ddd;
+}
+
+button {
+  margin: 0 5px;
+}
+
+button.delete {
+  background-color: #dc3545;
+  color: black;
+  border: none;
+  width: 60px;
+  height: 25px;
+  border-radius: 2px;
+}
+
+button.edit {
+  background-color: yellow;
+  color: black;
+  border: none;
+  width: 60px;
+  height: 25px;
+  border-radius: 2px;
+  
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.dropdown-filter {
+  display: flex;
+  justify-content: space-between; 
+  margin-top : 10px; 
+  margin-bottom: 15px; 
+  padding: 10px; 
+  border: 1px solid #ddd;
+  border-radius: 5px; 
+  background-color: #f9f9f9; 
+}
+
+button.save {
+  background-color: #007bff;
   color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+button.save-button {
+  grid-column: 2;
+  justify-self: end;
+  margin-right: 416px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+button.save :hover {
+  background-color: #0056b3;
+}
+
+button.delete {
+  background-color: #dc3545;
+}
+
+button.delete:hover {
+  background-color: #c82333;
+}
+
+button.edit:hover {
+  background-color: #ffeb3b;
+}
+
+
+.search-bar {
+  width: 30%;
+  padding: 10px;
+  border-radius: 15px;
+  border: solid 1px;
+  outline: none;
+  font-size: 16px;
+  transition: width 0.4s ease-in-out;
+}
+
+.search-bar:focus {
+  width: 40%;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  /* For smaller screens, reduce the width of the search bar */
+  .search-bar {
+    width: 50%;
   }
-  to {
-    transform: rotate(360deg);
+
+  /* Reduce the margin of the save button */
+  button.save-button {
+    margin-right: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* For mobile screens, make the form grid a single column */
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Reduce the width of the search bar */
+  .search-bar {
+    width: 80%;
+  }
+
+  /* Reduce the margin of the save button */
+  button.save-button {
+    margin-right: 20px;
   }
 }
